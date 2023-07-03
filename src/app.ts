@@ -25,32 +25,32 @@ class App {
     this.page = new PageComponent(PageItemComponent);
     this.page.attachTo(appRoot);
 
-    this.bindElementDialog<MediaSectionInput>(
+    this.bindElementToDialog<MediaSectionInput>(
       '#new-image',
       MediaSectionInput,
       (input: MediaSectionInput) => new ImageComponent(input.title, input.url)
     );
 
-    this.bindElementDialog<MediaSectionInput>(
+    this.bindElementToDialog<MediaSectionInput>(
       '#new-video',
       MediaSectionInput,
       (input: MediaSectionInput) => new VideoComponent(input.title, input.url)
     );
 
-    this.bindElementDialog<TextSectionInput>(
+    this.bindElementToDialog<TextSectionInput>(
       '#new-note',
       TextSectionInput,
       (input: TextSectionInput) => new NoteComponent(input.title, input.body)
     );
 
-    this.bindElementDialog<TextSectionInput>(
+    this.bindElementToDialog<TextSectionInput>(
       '#new-todo',
       TextSectionInput,
       (input: TextSectionInput) => new TodoComponent(input.title, input.body)
     );
   }
 
-  private bindElementDialog<T extends (MediaData | TextData) & Component>(
+  private bindElementToDialog<T extends (MediaData | TextData) & Component>(
     selector: string,
     InputComponent: InputComponentConstructor<T>,
     makeSection: (input: T) => Component
@@ -75,4 +75,4 @@ class App {
   }
 }
 
-new App(document.querySelector('.document') as HTMLElement, document.body);
+new App(document.querySelector('.document')! as HTMLElement, document.body);
