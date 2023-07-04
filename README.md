@@ -1,5 +1,5 @@
 # Notepad
-https://feelslikemmmm.github.io/portfolio/](https://feelslikemmmm.github.io/Notepad/
+https://feelslikemmmm.github.io/Notepad/
 
 ![notepad](https://github.com/feelslikemmmm/Notepad/assets/67893516/db913185-1a9b-46b7-812f-f28bdd1376ff)
 
